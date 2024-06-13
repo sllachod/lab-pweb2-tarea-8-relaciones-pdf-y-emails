@@ -1,3 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from tables.form import NombreURLForm
 
-# Create your views here.
+def ingresar_datos(request):
+    if request.method == 'POST':
+        form = NombreURLForm(request.POST)
+        if form.is_valid():
+            nombre = ['nombre']
+            url = ['url']
+            return redirect('success')
+    else:
+        form = NombreURLForm()
+    
+    return render(request, 'pdf/datos.html', {'form': form})
+
+def success_view(request):
+    return render(request, 'pdf/success.html')

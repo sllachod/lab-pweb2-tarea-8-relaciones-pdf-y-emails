@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingresar Datos</title>
+</head>
+<body>
+    <h1>Ingresar Nombre y URL</h1>
+    <form method="post" action="ingresar_datos">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
