@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Ingresar Nombre y URL</h1>
-    <form method="post" action="ingresar_datos">
+    <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Enviar</button>
