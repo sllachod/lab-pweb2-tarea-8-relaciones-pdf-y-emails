@@ -5,8 +5,7 @@ def ingresar_datos(request):
     if request.method == 'POST':
         form = NombreURLForm(request.POST)
         if form.is_valid():
-            nombre = ['nombre']
-            url = ['url']
+            form.save()
             return redirect('success')
     else:
         form = NombreURLForm()
