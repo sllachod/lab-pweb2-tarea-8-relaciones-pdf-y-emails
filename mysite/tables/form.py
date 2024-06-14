@@ -1,5 +1,7 @@
 from django import forms
+from .models import NombreURL
 
-class NombreURLForm(forms.Form):
-    nombre = forms.CharField(max_length=100, label='Nombre')
-    url = forms.URLField(label='URL')
+class NombreURLForm(forms.ModelForm):
+    class Meta:
+        model = NombreURL
+        fields = ['nombre', 'url']
