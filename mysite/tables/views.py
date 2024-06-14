@@ -10,7 +10,7 @@ def ingresar_datos(request):
     else:
         form = NombreURLForm()
     
-    return render(request, 'pdf/datos.html', {'form': form})
+    return render(request, 'url/datos.html', {'form': form})
 
 def success_view(request):
-    return render(request, 'pdf/success.html')
+    return render(request, 'url/success.html')
