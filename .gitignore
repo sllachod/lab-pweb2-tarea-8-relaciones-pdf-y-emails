@@ -6,7 +6,6 @@
 *.pot
 *.py[co]
 .tox/
-registroCurso/__pycache__
 __pycache__
 MANIFEST
 dist/
