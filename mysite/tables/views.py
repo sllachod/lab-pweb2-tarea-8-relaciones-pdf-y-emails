@@ -47,4 +47,19 @@ def pdf_view(request):
         return response
     return HttpResponse("Error al generar el PDF.", status=500)
 
-
+def enviar_email(request):
+    if request.method == 'POST':
+        form = EmailForm(request.POST)
+        if form.is_valid():
+            destinatario = form.cleaned_data['destinatario']
+            asunto = form.cleaned_data['asunto']
+            mensaje = form.cleaned_data['mensaje']
+            
+            # Envío del correo electrónico
+            send_mail(asunto, mensaje, 'sllachod@unsa.edu.pe', [destinatario])
+            return render(request, 'url/email_success.html')  # Puedes crear esta plantilla
+        
+    else:
+        form = EmailForm()
+    
+    return render(request, 'url/email_form.html', {'form': form})
