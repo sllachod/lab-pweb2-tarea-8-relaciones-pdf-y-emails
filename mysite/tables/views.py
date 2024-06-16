@@ -51,12 +51,13 @@ def enviar_email(request):
     if request.method == 'POST':
         form = EmailForm(request.POST)
         if form.is_valid():
+            remitente = form.cleaned_data['remitente']
             destinatario = form.cleaned_data['destinatario']
             asunto = form.cleaned_data['asunto']
             mensaje = form.cleaned_data['mensaje']
             
             # Envío del correo electrónico
-            send_mail(asunto, mensaje, 'sllachod@unsa.edu.pe', [destinatario])
+            send_mail(asunto, mensaje, remitente, [destinatario])
             return render(request, 'url/email_success.html')  # Puedes crear esta plantilla
         
     else:
