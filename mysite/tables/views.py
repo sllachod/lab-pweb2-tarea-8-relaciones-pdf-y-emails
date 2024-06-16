@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from mysite import settings
 from tables.form import NombreURLForm
 from .models import NombreURL
 from django.http import HttpResponse
@@ -51,17 +52,12 @@ def enviar_email(request):
     if request.method == 'POST':
         form = EmailForm(request.POST)
         if form.is_valid():
-            remitente = form.cleaned_data['remitente']
-            password = form.cleaned_data['password']
             destinatario = form.cleaned_data['destinatario']
             asunto = form.cleaned_data['asunto']
             mensaje = form.cleaned_data['mensaje']
             
             # Envío del correo electrónico
-            send_mail(asunto, mensaje, remitente, [destinatario],
-            fail_silently=False,  # Para ver los errores si ocurren
-            auth_user=remitente,  # Usuario de autenticación
-            auth_password=password)  # Contraseña del remitente
+            send_mail(asunto, mensaje, settings.EMAIL_HOST_USER [destinatario])
 
             return render(request, 'url/email_success.html')  # Puedes crear esta plantilla
         
