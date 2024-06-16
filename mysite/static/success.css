@@ -1,0 +1,25 @@
+/* Estilos para el título h1 */
+h1 {
+    color: #2ecc71; /* Color verde para indicar éxito */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para los enlaces a */
+a {
+    display: block; /* Mostrar los enlaces como bloques */
+    width: 200px; /* Ancho deseado */
+    margin: 10px auto; /* Margen automático para centrarlos */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto del enlace */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: #3498db; /* Color azul para los enlaces */
+    border: 2px solid #3498db; /* Borde azul alrededor del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+}
+
+/* Estilo cuando el cursor está sobre el enlace */
+a:hover {
+    background-color: #3498db; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+}

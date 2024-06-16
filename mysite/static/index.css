@@ -1,0 +1,50 @@
+/* Archivo: index.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 20px; /* Márgenes alrededor del cuerpo */
+    padding: 0; /* Padding cero para el cuerpo */
+    background-color: #f2f2f2; /* Color de fondo para toda la página */
+}
+
+h1 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto del título */
+}
+
+table {
+    width: 80%; /* Ancho de la tabla */
+    margin: 20px auto; /* Margen automático para centrar la tabla */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    background-color: #fff; /* Color de fondo de la tabla */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Borde delgado gris para las celdas */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: left; /* Alinear el texto a la izquierda en las celdas */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo gris claro para las cabeceras */
+}
+
+/* Estilos para los enlaces */
+a {
+    display: inline-block; /* Mostrar los enlaces en línea con bloque */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 10px; /* Margen entre enlaces */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: #3498db; /* Color azul para los enlaces */
+    border: 2px solid #3498db; /* Borde azul alrededor del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+}
+
+/* Estilo cuando el cursor está sobre el enlace */
+a:hover {
+    background-color: #3498db; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+}
