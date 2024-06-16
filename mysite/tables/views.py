@@ -22,7 +22,7 @@ def success_view(request):
 
 def index(request):
     datos = NombreURL.objects.all()
-    return render(request, 'index.html', {'datos': datos})
+    return render(request, 'url/index.html', {'datos': datos})
 
 
 def render_to_pdf(template_src, context_dict={}):
