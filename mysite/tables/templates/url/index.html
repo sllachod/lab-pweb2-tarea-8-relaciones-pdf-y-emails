@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Datos</title>
+</head>
+<body>
+    <h1>Listado de Datos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>URL</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dato in datos %}
+            <tr>
+                <td>{{ dato.nombre }}</td>
+                <td><a href="{{ dato.url }}">{{ dato.url }}</a></td>
+                <td>{{ dato.descripcion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
