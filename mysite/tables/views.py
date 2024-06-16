@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from mysite import settings
+from django.conf import settings 
 from tables.form import NombreURLForm
 from .models import NombreURL
 from django.http import HttpResponse
@@ -55,13 +55,12 @@ def enviar_email(request):
             destinatario = form.cleaned_data['destinatario']
             asunto = form.cleaned_data['asunto']
             mensaje = form.cleaned_data['mensaje']
-            
-            # Envío del correo electrónico
-            send_mail(asunto, mensaje, settings.EMAIL_HOST_USER [destinatario])
 
-            return render(request, 'url/email_success.html')  # Puedes crear esta plantilla
-        
+            send_mail(asunto, mensaje, settings.EMAIL_HOST_USER, [destinatario])
+
+            return render(request, 'url/email_success.html')
+
     else:
         form = EmailForm()
-    
+
     return render(request, 'url/email_form.html', {'form': form})
