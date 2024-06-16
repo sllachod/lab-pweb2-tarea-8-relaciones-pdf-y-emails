@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 import io
+from django.core.mail import send_mail
+from tables.form import EmailForm
 
 def ingresar_datos(request):
     if request.method == 'POST':
@@ -44,3 +46,5 @@ def pdf_view(request):
         response['Content-Disposition'] = 'attachment; filename="datos.pdf'
         return response
     return HttpResponse("Error al generar el PDF.", status=500)
+
+
