@@ -31,11 +31,16 @@ def render_to_pdf(template_src, context_dict={}):
     result = io.BytesIO()
     pdf = pisa.pisaDocument(io.BytesIO(html.encode("UTF-8")), result)
     if not pdf.err:
-        return HttpResponse(result.getvalue(), content_type='application/pdf')
+        return result.getvalue()
     return None
 
 def pdf_view(request):
-    datos = datos.objects.all()
+    datos = NombreURL.objects.all()
     context = {'datos': datos}
-    pdf = render_to_pdf('index.html', context)
-    return HttpResponse(pdf, content_type='application/pdf')
+    pdf = render_to_pdf('url/index.html', context)
+    
+    if pdf:
+        response = HttpResponse(pdf, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="datos.pdf'
+        return response
+    return HttpResponse("Error al generar el PDF.", status=500)
