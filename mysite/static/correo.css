@@ -1,0 +1,54 @@
+/* Archivo: correo.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
+    background-color: #f9f9f9; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto */
+}
+
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+form label {
+    display: block; /* Mostrar etiquetas como bloques */
+    margin-bottom: 5px; /* Margen inferior */
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde delgado gris */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir padding en el ancho */
+}
+
+form button {
+    background-color: #3498db; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor apuntador */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+form button:hover {
+    background-color: #2980b9; /* Color de fondo azul más oscuro al pasar el cursor */
+}

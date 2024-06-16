@@ -1,0 +1,69 @@
+/* Archivo: datos.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
+    background-color: #f9f9f9; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 50px auto; /* Centrar el contenedor */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.form-title {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto */
+}
+
+.form-container {
+    margin-top: 20px; /* Margen superior */
+}
+
+.form-container label {
+    display: block; /* Mostrar etiquetas como bloques */
+    margin-bottom: 5px; /* Margen inferior */
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+.form-container input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde delgado gris */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir padding en el ancho */
+}
+
+.form-submit {
+    background-color: #3498db; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor apuntador */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.form-submit:hover {
+    background-color: #2980b9; /* Color de fondo azul más oscuro al pasar el cursor */
+}
+
+.form-link {
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-top: 10px; /* Margen superior */
+    text-decoration: none; /* Sin subrayado */
+    color: #3498db; /* Color azul */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.form-link:hover {
+    color: #2980b9; /* Color azul más oscuro al pasar el cursor */
+}

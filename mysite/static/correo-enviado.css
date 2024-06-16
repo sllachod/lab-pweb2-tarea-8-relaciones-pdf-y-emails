@@ -1,0 +1,21 @@
+/* Archivo: correo-enviado.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
+    background-color: #f9f9f9; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Alinear todo el texto al centro */
+}
+
+h1 {
+    color: #2ecc71; /* Color verde para indicar éxito */
+    margin-top: 50px; /* Margen superior */
+}
+
+p {
+    font-size: 18px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
