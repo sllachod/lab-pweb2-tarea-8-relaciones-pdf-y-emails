@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Ingresar Datos</title>
+    <link rel="stylesheet" href="{% static 'datos.css' %}">
 </head>
 <body>
-    <h1>Ingresar Nombre y URL</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Enviar</button>
-        <a href="{% url 'Usuarios' %}">Regresar</a>
-    </form>
+    <div class="container">
+        <h1 class="form-title">Ingresar Nombre y URL</h1>
+        <form class="form-container" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="form-submit" type="submit">Enviar</button>
+            <a class="form-link" href="{% url 'Usuarios' %}">Regresar</a>
+        </form>
+    </div>
 </body>
 </html>
